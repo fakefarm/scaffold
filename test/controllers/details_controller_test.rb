@@ -34,7 +34,7 @@ class DetailsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "PATCH detail" do
-    patch detail_url(@detail), params: { detail: { completed: @detail.completed, date_completed: @detail.date_completed, product_id: @detail.product_id, project_id: @detail.project_id, task_id: @detail.task_id, title: @detail.title, user_id: @detail.user_id } }
+    patch detail_url(@detail), params: { detail: { completed: @detail.completed, completed_date: @detail.completed_date, product_id: @detail.product_id, project_id: @detail.project_id, task_id: @detail.task_id, title: @detail.title, user_id: @detail.user_id } }
     assert_redirected_to detail_url(@detail)
   end
 
