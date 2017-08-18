@@ -1,5 +1,6 @@
 one:
-  name: MyString
+  name: FakeFarm
+  user: one
 
-two:
-  name: MyString
+invalid:
+  user: one

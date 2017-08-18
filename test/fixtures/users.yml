@@ -1,0 +1,6 @@
+one:
+  first_name: Dave
+  last_name: Woodall
+  email: dave@woodalls.me
+
+invalid: {}

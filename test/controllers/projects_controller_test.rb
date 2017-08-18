@@ -17,7 +17,7 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
 
   test "POST #project" do
     assert_difference('Project.count') do
-      post projects_url, params: { project: { name: @project.name, product_id: @project.product.id } }
+      post projects_url, params: { project: { name: @project.name, product_id: @project.product.id, user_id: @project.user.id } }
     end
 
     assert_redirected_to project_url(Project.last)

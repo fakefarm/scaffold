@@ -1,13 +1,16 @@
 require 'test_helper'
 
 class ProductTest < ActiveSupport::TestCase
-  test 'is invalid without a valid name' do
-    p = Product.new
-    assert_equal p.valid?, false
+  setup do
+    @product = products(:invalid)
+  end
+
+  test 'is invalid without a name' do
+    assert_equal @product.valid?, false
   end
 
   test 'valid with a name' do
-    p = Product.create(name: 'scaffold')
-    assert_equal p.valid?, true
+    @product.name = 'scaffold'
+    assert_equal @product.valid?, true
   end
 end

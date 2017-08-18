@@ -1,7 +1,8 @@
 one:
-  name: MyString
+  name: Build out the projects
   product: one
+  user: one
 
-two:
-  name: MyString
-  product: two
+invalid:
+  product: one
+  user: one
