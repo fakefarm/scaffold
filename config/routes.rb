@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :retros
   resources :details
   resources :tasks
   resources :activities

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170818010449) do
+ActiveRecord::Schema.define(version: 20170818021855) do
 
   create_table "activities", force: :cascade do |t|
     t.integer "user_id"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20170818010449) do
   create_table "details", force: :cascade do |t|
     t.string "title"
     t.boolean "completed"
-    t.datetime "date_completed"
+    t.datetime "completed_date"
     t.integer "product_id"
     t.integer "project_id"
     t.integer "user_id"
@@ -53,6 +53,19 @@ ActiveRecord::Schema.define(version: 20170818010449) do
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_projects_on_product_id"
     t.index ["user_id"], name: "index_projects_on_user_id"
+  end
+
+  create_table "retros", force: :cascade do |t|
+    t.string "title"
+    t.string "verdict"
+    t.boolean "completed"
+    t.datetime "completed_date"
+    t.integer "user_id"
+    t.integer "project_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id"], name: "index_retros_on_project_id"
+    t.index ["user_id"], name: "index_retros_on_user_id"
   end
 
   create_table "tasks", force: :cascade do |t|

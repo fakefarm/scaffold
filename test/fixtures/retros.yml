@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  verdict: MyString
+  completed: false
+  completed_date: 2017-08-17 22:18:55
+  user: one
+  project: one
+
+two:
+  title: MyString
+  verdict: MyString
+  completed: false
+  completed_date: 2017-08-17 22:18:55
+  user: two
+  project: two
