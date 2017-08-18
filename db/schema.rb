@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20170818021855) do
     t.integer "project_id"
     t.integer "user_id"
     t.integer "task_id"
+    t.integer "user_assigned"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_details_on_product_id"

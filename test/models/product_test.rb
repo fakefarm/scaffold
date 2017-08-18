@@ -13,4 +13,24 @@ class ProductTest < ActiveSupport::TestCase
     @product.name = 'scaffold'
     assert_equal @product.valid?, true
   end
+
+  test 'has many tasks' do
+    product = products(:one)
+    assert product.tasks
+  end
+
+  test 'has many projects' do
+    product = products(:one)
+    assert product.projects
+  end
+
+  test "has many activities" do
+    @product = products(:one)
+    assert @product.activities
+  end
+
+  test "has many details" do
+    @product = products(:one)
+    assert @product.details
+  end
 end
