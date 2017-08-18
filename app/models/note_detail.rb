@@ -1,0 +1,2 @@
+class NoteDetail < Note
+end

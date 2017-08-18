@@ -1,0 +1,2 @@
+class NoteProject < Note
+end

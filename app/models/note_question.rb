@@ -1,0 +1,2 @@
+class NoteQuestion < Note
+end

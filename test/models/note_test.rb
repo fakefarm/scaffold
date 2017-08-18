@@ -9,8 +9,13 @@ class NoteTest < ActiveSupport::TestCase
     assert_equal @note.valid?, false
   end
 
-  test 'valid with a body' do
+  test 'is invalid without a note type' do
+    assert_equal @note.valid?, false
+  end
+
+  test 'valid with a body and note type' do
     @note.body = 'learn to love the Law of God'
+    @note.type = 'learn to love the Law of God'
     assert_equal @note.valid?, true
   end
 end

@@ -1,0 +1,2 @@
+class NoteTask < Note  
+end

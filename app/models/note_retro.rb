@@ -1,0 +1,2 @@
+class NoteRetro < Note
+end
