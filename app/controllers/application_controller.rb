@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   PERMITTED_PARAMS = [ :user_id,
                        :product_id,
                        :project_id,
-                       :activity_id
+                       :activity_id,
+                       :task_id
                      ]
 end
