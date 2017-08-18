@@ -1,28 +1,20 @@
 class RetrosController < ApplicationController
   before_action :set_retro, only: [:show, :edit, :update, :destroy]
 
-  # GET /retros
-  # GET /retros.json
   def index
     @retros = Retro.all
   end
 
-  # GET /retros/1
-  # GET /retros/1.json
   def show
   end
 
-  # GET /retros/new
   def new
     @retro = Retro.new
   end
 
-  # GET /retros/1/edit
   def edit
   end
 
-  # POST /retros
-  # POST /retros.json
   def create
     @retro = Retro.new(retro_params)
 
@@ -37,8 +29,6 @@ class RetrosController < ApplicationController
     end
   end
 
-  # PATCH/PUT /retros/1
-  # PATCH/PUT /retros/1.json
   def update
     respond_to do |format|
       if @retro.update(retro_params)
@@ -51,8 +41,6 @@ class RetrosController < ApplicationController
     end
   end
 
-  # DELETE /retros/1
-  # DELETE /retros/1.json
   def destroy
     @retro.destroy
     respond_to do |format|
@@ -62,12 +50,10 @@ class RetrosController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_retro
       @retro = Retro.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def retro_params
       params.require(:retro).permit(:title, :verdict, :completed, :completed_date, :user_id, :project_id)
     end
