@@ -29,6 +29,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "has many details" do
+    skip
     @user = users(:one)
     assert @user.details
   end

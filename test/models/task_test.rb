@@ -15,6 +15,7 @@ class TaskTest < ActiveSupport::TestCase
   end
 
   test "has many details" do
+    skip
     @task = tasks(:one)
     assert @task.details
   end
