@@ -9,7 +9,7 @@ class TaskTest < ActiveSupport::TestCase
     assert_equal @task.valid?, false
   end
 
-  test 'valid with all attributes' do
+  test 'valid with a title' do
     @task.title = 'build this baby'
     assert_equal @task.valid?, true
   end
