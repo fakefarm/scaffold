@@ -1,0 +1,2 @@
+class NoteProduct < Note
+end
