@@ -1,8 +1,10 @@
+abstract: &associations
+  product: one
+  user: one
+  
 one:
   name: Build out the projects
-  product: one
-  user: one
+  <<: *associations
 
 invalid:
-  product: one
-  user: one
+  <<: *associations

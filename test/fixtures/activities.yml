@@ -1,9 +1,6 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
+abstract: &associations
   user: one
   product: one
 
-two:
-  user: two
-  product: two
+one:
+  <<: *associations

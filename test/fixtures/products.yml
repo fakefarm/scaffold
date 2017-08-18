@@ -1,6 +1,9 @@
-one:
-  name: FakeFarm
+abstract: &associations
   user: one
 
+one:
+  name: FakeFarm
+  <<: *associations
+
 invalid:
-  user: one
+  <<: *associations

@@ -1,10 +1,11 @@
-one:
-  title: MyString
+abstract: &associations
   user: one
   product: one
   project: one
 
+one:
+  title: MyString
+  <<: *associations
+
 invalid:
-  user: one
-  product: one
-  project: one
+  <<: *associations
