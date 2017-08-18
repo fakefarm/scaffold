@@ -1,0 +1,11 @@
+abstract: &associations
+  user: one
+
+one:
+  status: MyString
+  type:
+  body: MyText
+  <<: *associations
+
+invalid:
+  <<: *associations

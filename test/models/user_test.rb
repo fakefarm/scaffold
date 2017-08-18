@@ -27,7 +27,7 @@ class UserTest < ActiveSupport::TestCase
     @user = users(:one)
     assert @user.activities
   end
-  
+
   test "has many details" do
     @user = users(:one)
     assert @user.details
@@ -51,6 +51,11 @@ class UserTest < ActiveSupport::TestCase
   test "has many tasks" do
     @user = users(:one)
     assert @user.tasks
+  end
+
+  test "has many notes" do
+    @user = users(:one)
+    assert @user.notes
   end
 
 end
