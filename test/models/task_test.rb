@@ -13,4 +13,9 @@ class TaskTest < ActiveSupport::TestCase
     @task.title = 'build this baby'
     assert_equal @task.valid?, true
   end
+
+  test "has many details" do
+    @task = tasks(:one)
+    assert @task.details
+  end
 end

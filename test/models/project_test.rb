@@ -13,4 +13,19 @@ class ProjectTest < ActiveSupport::TestCase
     @project.name = 'Lay down the scaffold'
     assert_equal @project.valid?, true
   end
+
+  test "has many details" do
+    @project = projects(:one)
+    assert @project.details
+  end
+
+  test "has one retro" do
+    @project = projects(:one)
+    assert @project.retro
+  end
+
+  test "has many tasks" do
+    @project = projects(:one)
+    assert @project.tasks
+  end
 end
