@@ -1,0 +1,10 @@
+one:
+  title: MyString
+  user: one
+  product: one
+  project: one
+
+invalid:
+  user: one
+  product: one
+  project: one
