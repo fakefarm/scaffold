@@ -1,15 +1,33 @@
 abstract: &associations
+  status: incomplete
+  body: MyText
   user: one
 
 one:
-  status: MyString
   type: Note::Product
-  body: MyText
+  <<: *associations
+
+detail:
+  type: Note::Detail
+  <<: *associations
+
+product:
+  type: Note::Product
+  <<: *associations
+
+project:
+  type: Note::Project
+  <<: *associations
+
+question:
+  type: Note::Question
+  <<: *associations
+
+task:
+  type: Note::Task
   <<: *associations
 
 noType:
-  status: MyString
-  body: MyText
   <<: *associations
 
 invalid: {}
