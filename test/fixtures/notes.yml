@@ -3,9 +3,13 @@ abstract: &associations
 
 one:
   status: MyString
-  type:
+  type: Note::Product
   body: MyText
   <<: *associations
 
-invalid:
+noType:
+  status: MyString
+  body: MyText
   <<: *associations
+
+invalid: {}
