@@ -1,2 +1,0 @@
-class NoteDetail < Note
-end

@@ -1,2 +1,0 @@
-class NoteProduct < Note
-end
