@@ -28,8 +28,6 @@ guard :rspec, cmd: "bundle exec rspec" do
   require "guard/rspec/dsl"
   dsl = Guard::RSpec::Dsl.new(self)
 
-  notification :terminal_notifier if `uname` =~ /Darwin/
-
   # RSpec files
   rspec = dsl.rspec
   watch(rspec.spec_helper) { rspec.spec_dir }
@@ -68,3 +66,5 @@ guard :rspec, cmd: "bundle exec rspec" do
     Dir[File.join("**/#{m[1]}.feature")][0] || "spec/acceptance"
   end
 end
+
+notification :terminal_notifier, timeout: 2 if `uname` =~ /Darwin/
