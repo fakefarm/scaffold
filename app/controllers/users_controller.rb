@@ -2,13 +2,15 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def index
-    @users = User.all
+    @users = policy_scope(User).all
   end
 
   def show
+    authorize @user
   end
 
   def new
+    authorize User
     @user = User.new
   end
 
@@ -17,7 +19,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-
+    authorize @user
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
