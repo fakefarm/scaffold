@@ -27,6 +27,7 @@ end
 group :development do
   gem 'guard'
   gem 'guard-rspec', require: false
+  gem 'terminal-notifier-guard'
   gem 'pry-rails'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'

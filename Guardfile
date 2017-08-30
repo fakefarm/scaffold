@@ -28,7 +28,7 @@ guard :rspec, cmd: "bundle exec rspec" do
   require "guard/rspec/dsl"
   dsl = Guard::RSpec::Dsl.new(self)
 
-  # Feel free to open issues for suggestions and improvements
+  notification :terminal_notifier if `uname` =~ /Darwin/
 
   # RSpec files
   rspec = dsl.rspec
