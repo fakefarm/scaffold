@@ -5,43 +5,47 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '~> 5.1.3'
-gem 'sqlite3'
-gem 'pundit'
-gem 'puma', '~> 3.7'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.2'
-gem 'turbolinks', '~> 5'
-gem 'jbuilder', '~> 2.5'
-gem 'active_model_serializers'
+# MY GEMS
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'pundit' # authorization
+gem 'active_model_serializers' # JSON mgmt
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'capybara', '~> 2.13'
-  gem 'selenium-webdriver'
-  gem 'rspec-rails', '~> 3.6'
-  gem 'factory_girl_rails'
-  gem 'faker'
+  gem 'rspec-rails', '~> 3.6' # Testing related
+  gem 'factory_girl_rails' # Testing related
+  gem 'faker' # Testing related
+  gem 'guard' # Testing related
 end
 
 group :development do
-  gem 'guard'
-  gem 'guard-rspec', require: false
-  gem 'terminal-notifier-guard'
-  gem 'pry-rails'
-  gem 'pry-doc'
-  gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'spring'
-  gem 'spring-commands-rspec'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'guard-rspec', require: false # Testing related
+  gem 'terminal-notifier-guard' # Testing related
+  gem 'pry-rails' # Debugger
+  gem 'pry-doc' # Debugger
+  gem 'spring-commands-rspec' # Testing related
 end
 
 group :test do
-  gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
+  gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5' # Testing related
+end
+
+# Standard Gems
+
+gem 'rails', '~> 5.1.3'
+gem 'sqlite3'
+gem 'sass-rails', '~> 5.0'
+gem 'uglifier', '>= 1.3.0'
+gem 'turbolinks', '~> 5'
+gem 'jbuilder', '~> 2.5'
+gem 'puma', '~> 3.7'
+
+group :development, :test do
+  gem 'selenium-webdriver'
+  gem 'capybara', '~> 2.13'
+end
+
+group :development do
+  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
