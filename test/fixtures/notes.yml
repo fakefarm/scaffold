@@ -27,6 +27,10 @@ task:
   type: Note::Task
   <<: *associations
 
+retro:
+  type: Note::Retro
+  <<: *associations
+
 noType:
   <<: *associations
 
